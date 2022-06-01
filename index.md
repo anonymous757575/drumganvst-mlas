@@ -1,11 +1,14 @@
-<header class="tc ph4">
-  <h1 class="f3 f2-m f1-l fw2 black-90 mv3">
-    This is the title
-  </h1>
-  <h2 class="f5 f4-m f3-l fw2 black-50 mt0 lh-copy">
-    This is the subtitle where additional information can go if you really need it.
-  </h2>
-</header>
+<div align="center">
+  <center><h1>My title</h1></center>
+</div>
+
+<br/>
+
+<div align="center">
+
+<b>My subclass</b>
+
+</div>
 
 # DrumGAN VST: A Plugin for Drum Sound Analysis/Synthesis with Autoencoding Generative Adversarial Networks
 ## Supplementary material
