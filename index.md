@@ -9,7 +9,9 @@ In this work, we present DrumGAN VST, a plugin for the synthesis of drum sounds 
 4) Development of a VST prototype
 5) Integration into commercial software plugin from a top audio-tech company.
 
-
+<audio controls>
+  <source src="https://www.computerhope.com/jargon/m/example.mp3" />
+</audio>
 
 
 <br>
