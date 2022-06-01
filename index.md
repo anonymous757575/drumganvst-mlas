@@ -18,6 +18,16 @@ DrumGAN VST is a simple and intuitive plugin for drum sound synthesis employing 
 
 In what follows, we showcase the aforementioned capabilities of DrumGAN VST by providing some audio and musical examples. We also show a demo of the latest prototype (to preserve anonymity, a demo of the final commercial software will be published upon acceptance of the paper).
 
+
+
+<div align="center" style="font-size:75%;">
+<img src="images/DRUMGAN2.png" width=700px><br>
+Diagram of DrumGAN training procedure. Rather than using the true label as conditioning information for the Generator, we use the vector of class probabilities output by a pretrained classifier. This allows continuous control on the generated class after training, which enables creating hybrid sounds.
+</div>
+
+<br><br><br><br><br>
+
+
 <!-- <br>
 This website contains supplementary material to the following sections
 
@@ -26,18 +36,11 @@ This website contains supplementary material to the following sections
   * [Adding an encoder](#adding-an-encoder)
  -->
 
-## Some flavour 
-Some blabla
+## A flavour of its drum sound quality and diversity compared to other neurla drum synthesizers
 
-## Control instrument-specific features
+
+## Controlling instrument-specific features
 Some more blabla
-
-<div align="center" style="font-size:75%;">
-<img src="images/DRUMGAN2.png" width=700px><br>
-Diagram of DrumGAN training procedure. Rather than using the true label as conditioning information for the Generator, we use the vector of class probabilities output by a pretrained classifier. This allows continuous control on the generated class after training, which enables creating hybrid sounds.
-</div>
-
-<br><br><br><br><br>
 
 <table>
 <caption><b>Hybrid Generation </b></caption>
@@ -52,17 +55,17 @@ Diagram of DrumGAN training procedure. Rather than using the true label as condi
     <td style="text-align: center; vertical-align: middle;"><b>Kick = 0.2 </b></td>
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://github.com/anonymous757575/drumganvst-mlas/blob/gh-pages/audios/random_enc_dec.mp3">
+      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_gen drumgan.mp3">
       </audio>
     </td>
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://github.com/anonymous757575/drumganvst-mlas/blob/gh-pages/audios/random_enc_dec.mp3">
+      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_gen dsd.mp3">
       </audio>
     </td>
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://github.com/anonymous757575/drumganvst-mlas/blob/gh-pages/audios/random_enc_dec.mp3">
+      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_gen crash.mp3.mp3">
       </audio>
     </td>
   </tr>
@@ -71,17 +74,17 @@ Diagram of DrumGAN training procedure. Rather than using the true label as condi
     <td style="text-align: center; vertical-align: middle;"><b>Kick = 0.2 </b></td>
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://www.computerhope.com/jargon/m/example.mp3">
+      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_enc_dec.mp3">
       </audio>
     </td>
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://github.com/anonymous757575/drumganvst-mlas/blob/gh-pages/audios/random_enc_dec.mp3">
+      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/soma_enc_dec.mp3">
       </audio>
     </td>
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://github.com/anonymous757575/drumganvst-mlas/blob/gh-pages/audios/random_enc_dec.mp3">
+      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_gen.mp3">
       </audio>
     </td>
   </tr>
@@ -89,17 +92,17 @@ Diagram of DrumGAN training procedure. Rather than using the true label as condi
     <td style="text-align: center; vertical-align: middle;"><b>Kick = 0.2 </b></td>
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://github.com/anonymous757575/drumganvst-mlas/blob/gh-pages/audios/random_enc_dec.mp3">
+      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_gen.mp3">
       </audio>
     </td>
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://github.com/anonymous757575/drumganvst-mlas/blob/gh-pages/audios/random_enc_dec.mp3">
+      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_gen.mp3">
       </audio>
     </td>
         <td style="text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://github.com/anonymous757575/drumganvst-mlas/blob/gh-pages/audios/random_enc_dec.mp3">
+      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_gen.mp3">
       </audio>
     </td>
   </tr>
@@ -120,12 +123,12 @@ Once the generator network is trained, it is fixed and we use it to generate a d
     <td style="text-align: center; vertical-align: middle;"><b>Kick = 0.2 </b></td>
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://github.com/anonymous757575/drumganvst-mlas/blob/gh-pages/audios/random_enc_dec.mp3">
+      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_gen.mp3">
       </audio>
     </td>
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://github.com/anonymous757575/drumganvst-mlas/blob/gh-pages/audios/random_enc_dec.mp3">
+      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_gen.mp3">
       </audio>
     </td>
   </tr>
@@ -134,12 +137,12 @@ Once the generator network is trained, it is fixed and we use it to generate a d
     <td style="text-align: center; vertical-align: middle;"><b>Kick = 0.2 </b></td>
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://github.com/anonymous757575/drumganvst-mlas/blob/gh-pages/audios/random_enc_dec.mp3">
+      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_gen.mp3">
       </audio>
     </td>
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://github.com/anonymous757575/drumganvst-mlas/blob/gh-pages/audios/random_enc_dec.mp3">
+      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_gen.mp3">
       </audio>
     </td>
   </tr>
