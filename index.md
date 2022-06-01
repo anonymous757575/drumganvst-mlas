@@ -1,5 +1,5 @@
 <div align="center">
-  <center><h1>DrumGAN VST: A Plugin for Drum Sound Analysis/Synthesis with Autoencoding Generative Adversarial Networks</h1></center>
+  <center><h1>DrumGAN VST: A Plugin for Drum Sound Analysis/Synthesis with Autoencoding GANs</h1></center>
 </div>
 
 <div align="center">
@@ -10,26 +10,26 @@
 This repository contains supplementary material with regard to our paper "[DrumGAN VST](paper.pdf)", submitted to the Machine Learning for Audio Synthesis (MLAS) workshop at ICML 2022.
 
 ## Overview
-In this work, we present DrumGAN VST, a simple and intuitive plugin for drum sound synthesis employing Generative Adversarial Networks (GANs) and inspired by previous work [1]. DrumGAN VST can synthesize:
+DrumGAN VST is a simple and intuitive plugin for drum sound synthesis employing Generative Adversarial Networks (GANs) and inspired by previous work [1]. DrumGAN VST offers the following key features:
 1) 44.1 kHz sample-rate audio operability
-2) Continuous instrument control
-3) Encoding-decoding of sounds to generate variations
-4) Development of a VST prototype
-5) Integration into commercial software plugin from a top audio-tech company.
+2) Continuous instrument control over kick, snare, and cymbals: choose the amount of "kickness", "snareness", and "cymbalness" you want to confere to the synthesized sound. This control can also be used to create hymbrid sounds that morph characteristics from each instrument class, or to explore weird sounds by setting these parameters to unrealistic combinations (e.g., all to zero).
+3) Analysis/resynthesis AKA encoding/decoding: DrumGAN VST features an encoding neural network that can be used to analysize/encode some pre-existing sound and decode/resynthesize variations of it. 
+4) DrumGAN VST will be shortly available as an integrated feature in a commercial VST Plugin.
 
+In what follows, we showcase the aforementioned capabilities of DrumGAN VST by providing some audio and musical examples. We also show a demo of the latest prototype (to preserve anonymity, a demo of the final commercial software will be published upon acceptance of the paper).
 
-<br>
+<!-- <br>
 This website contains supplementary material to the following sections
 
   * [Increasing the sampling rate to 44,1 kHz](#increasing-the-sampling-rate-to-441-khz)
   * [From perceptual features to soft class labels](#from-perceptual-features-to-soft-class-labels)
   * [Adding an encoder](#adding-an-encoder)
+ -->
 
-
-## Increasing the sampling rate to 44,1 kHz
+## Some flavour 
 Some blabla
 
-## From perceptual features to soft class labels
+## Control instrument-specific features
 Some more blabla
 
 <div align="center" style="font-size:75%;">
