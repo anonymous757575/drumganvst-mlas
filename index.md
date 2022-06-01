@@ -18,12 +18,17 @@ DrumGAN VST is a simple and intuitive plugin for drum sound synthesis employing 
 
 In what follows, we showcase the aforementioned capabilities of DrumGAN VST by providing some audio and musical examples. We also show a demo of the latest prototype (to preserve anonymity, a demo of the final commercial software will be published upon acceptance of the paper).
 
+  <video width="500px" height="500px" 
+      controls="controls"/> 
 
+      <source src="vid.mp4" 
+          type="video/mp4"> 
+  </video> 
 
-<div align="center" style="font-size:75%;">
+<!-- <div align="center" style="font-size:75%;">
 <img src="images/DRUMGAN2.png" width=700px><br>
 Diagram of DrumGAN training procedure. Rather than using the true label as conditioning information for the Generator, we use the vector of class probabilities output by a pretrained classifier. This allows continuous control on the generated class after training, which enables creating hybrid sounds.
-</div>
+</div> -->
 
 <br><br><br><br><br>
 
