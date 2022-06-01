@@ -11,10 +11,10 @@ This repository contains supplementary material with regard to our paper "[DrumG
 
 ## Overview
 DrumGAN VST is a simple and intuitive plugin for drum sound synthesis employing Generative Adversarial Networks (GANs) and inspired by previous work [1]. DrumGAN VST offers the following key features:
-1) 44.1 kHz sample-rate audio operability
-2) Continuous instrument control over kick, snare, and cymbals: choose the amount of "kickness", "snareness", and "cymbalness" you want to confere to the synthesized sound. This control can also be used to create hymbrid sounds that morph characteristics from each instrument class, or to explore weird sounds by setting these parameters to unrealistic combinations (e.g., all to zero).
-3) Analysis/resynthesis AKA encoding/decoding: DrumGAN VST features an encoding neural network that can be used to analysize/encode some pre-existing sound and decode/resynthesize variations of it. 
-4) DrumGAN VST will be shortly available as an integrated feature in a commercial VST Plugin.
+1. 44.1 kHz sample-rate audio operability
+2. Continuous instrument control over kick, snare, and cymbals: choose the amount of "kickness", "snareness", and "cymbalness" you want to confere to the synthesized sound. This control can also be used to create hymbrid sounds that morph characteristics from each instrument class, or to explore weird sounds by setting these parameters to unrealistic combinations (e.g., all to zero).
+3. Analysis/resynthesis AKA encoding/decoding: DrumGAN VST features an encoding neural network that can be used to analysize/encode some pre-existing sound and decode/resynthesize variations of it. 
+4. DrumGAN VST will be shortly available as an integrated feature in a commercial VST plugin.
 
 In what follows, we showcase the aforementioned capabilities of DrumGAN VST by providing some audio and musical examples. We also show a demo of the latest prototype (to preserve anonymity, a demo of the final commercial software will be published upon acceptance of the paper).
 
@@ -41,27 +41,115 @@ This website contains supplementary material to the following sections
 ## Baseline Comparisons
 We compare DrumGAN VST generations with real samples and two other neural drum synthesizers as baselines: one is CRASH, based on diffusion models, and the other is Style-DrumSynth, based on StyleGAN. While the baselines are state-of-the-art, they have high bias and fail to capture the diversity of timbres in the dataset, while DrumGAN produces high quality samples similar to the real data. Samples were randomly selected to fairly reflect the diversity and quality of samples from each model. Quantitative comparisons can be found in the paper.
 
-A flavour of its drum sound quality and diversity compared to other neurla drum synthesizers
+A flavour of its drum sound quality and diversity compared to other neural drum synthesizers
+
+<table>
+<caption><b>Random generations</b></caption>
+  <tr>
+    <td></td>
+    <td style="text-align: center; vertical-align: middle;"><b>DrumGAN</b></td>
+    <td style="text-align: center; vertical-align: middle;"><b>??</b></td>
+  </tr>
+
+  <tr>
+    <td style="text-align: center; vertical-align: middle;"><b>Kicks </b></td>
+    <td style="text-align: center; vertical-align: middle;">
+      <audio controls>
+      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_kick.wav">
+      </audio>
+    </td>
+    <td style="text-align: center; vertical-align: middle;">
+      <audio controls>
+      <source src="">
+      </audio>
+    </td>
+  </tr>
+
+  <tr>
+    <td style="text-align: center; vertical-align: middle;"><b> Cymbals </b></td>
+    <td style="text-align: center; vertical-align: middle;">
+      <audio controls>
+      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_cymbal.wav">
+      </audio>
+    </td>
+    <td style="text-align: center; vertical-align: middle;">
+      <audio controls>
+      <source src="">
+      </audio>
+    </td>
+  </tr>
+
+  <tr>
+    <td style="text-align: center; vertical-align: middle;"><b> Snares </b></td>
+    <td style="text-align: center; vertical-align: middle;">
+      <audio controls>
+      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_snare.wav">
+      </audio>
+    </td>
+    <td style="text-align: center; vertical-align: middle;">
+      <audio controls>
+      <source src="">
+      </audio>
+    </td>
+  </tr>
+  </tr>
+
+
+</table>
+
+
 
 
 ## Instrument Control & Interpolations
 We show interpolations for DrumGAN VST. Inital and target timbres are chosen from generated samples. DrumGAN VST is explicitly conditioned on a global class probability latent vector, therefore, interpolations sound like reasonable instruments across all classes.
 
 <table>
-<caption><b>Hybrid Generation </b></caption>
+<caption><b>Class Interpolations</b></caption>
+
+  <tr>
+    <td style="text-align: center; vertical-align: middle;"><b>Cymbals to Kicks </b></td>
+    <td style="text-align: center; vertical-align: middle;">
+      <audio controls>
+      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/int_01.wav">
+      </audio>
+    </td>
+  </tr>
+
+  <tr>
+    <td style="text-align: center; vertical-align: middle;"><b> Kicks to Snares </b></td>
+    <td style="text-align: center; vertical-align: middle;">
+      <audio controls>
+      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/int_12.wav">
+      </audio>
+    </td>
+  </tr>
+
+  <tr>
+    <td style="text-align: center; vertical-align: middle;"><b> Cymbals to Snares </b></td>
+    <td style="text-align: center; vertical-align: middle;">
+      <audio controls>
+      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/int_02.wav">
+      </audio>
+    </td>
+  </tr>
+  </tr>
+
+
+</table>
+
+
+<table>
+<caption><b>Progressive mixing </b></caption>
   <tr>
     <td></td>
     <td style="text-align: center; vertical-align: middle;"><b>Kick = 1 </b></td>
     <td style="text-align: center; vertical-align: middle;"><b>Snare = 1</b></td>
-    <td style="text-align: center; vertical-align: middle;"><b>Cymbal =</b></td>
+    <td style="text-align: center; vertical-align: middle;"><b>Cymbal = 1</b></td>
   </tr>
 
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><b>Kick = 0.2 </b></td>
+    <td style="text-align: center; vertical-align: middle;"><b>Kick from 0 to 0.5 </b></td>
     <td style="text-align: center; vertical-align: middle;">
-      <audio controls>
-      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_gen drumgan.mp3">
-      </audio>
     </td>
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
@@ -76,16 +164,13 @@ We show interpolations for DrumGAN VST. Inital and target timbres are chosen fro
   </tr>
 
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><b>Kick = 0.2 </b></td>
+    <td style="text-align: center; vertical-align: middle;"><b>Snare from 0 to 0.5 </b></td>
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
       <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_enc_dec.mp3">
       </audio>
     </td>
     <td style="text-align: center; vertical-align: middle;">
-      <audio controls>
-      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/soma_enc_dec.mp3">
-      </audio>
     </td>
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
@@ -94,7 +179,7 @@ We show interpolations for DrumGAN VST. Inital and target timbres are chosen fro
     </td>
   </tr>
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><b>Kick = 0.2 </b></td>
+    <td style="text-align: center; vertical-align: middle;"><b>Cymbal from 0 to 0.5 </b></td>
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
       <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_gen.mp3">
@@ -105,10 +190,7 @@ We show interpolations for DrumGAN VST. Inital and target timbres are chosen fro
       <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_gen.mp3">
       </audio>
     </td>
-        <td style="text-align: center; vertical-align: middle;">
-      <audio controls>
-      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_gen.mp3">
-      </audio>
+    <td style="text-align: center; vertical-align: middle;">
     </td>
   </tr>
 </table>
@@ -126,29 +208,58 @@ We compare encoded and reconstructed pairs of audio examples for DrumGAN VST and
   </tr>
 
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><b>Kick = 0.2 </b></td>
+    <td style="text-align: center; vertical-align: middle;"><b>Unseen Kicks </b></td>
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_gen.mp3">
+      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/enc_dec_kicks.wav">
       </audio>
     </td>
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_gen.mp3">
+      <source src="">
       </audio>
     </td>
   </tr>
 
   <tr>
-    <td style="text-align: center; vertical-align: middle;"><b>Kick = 0.2 </b></td>
+    <td style="text-align: center; vertical-align: middle;"><b>Unseen Cymbals </b></td>
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_gen.mp3">
+      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/enc_dec_cymbals.wav">
       </audio>
     </td>
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_gen.mp3">
+      <source src="">
+      </audio>
+    </td>
+  </tr>
+
+  <tr>
+    <td style="text-align: center; vertical-align: middle;"><b>Unseen Snares </b></td>
+    <td style="text-align: center; vertical-align: middle;">
+      <audio controls>
+      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/enc_dec_snares.wav">
+      </audio>
+    </td>
+    <td style="text-align: center; vertical-align: middle;">
+      <audio controls>
+      <source src="">
+      </audio>
+    </td>
+  </tr>
+  </tr>
+
+  <tr>
+    <td style="text-align: center; vertical-align: middle;"><b>Unseen Other </b></td>
+    <td style="text-align: center; vertical-align: middle;">
+      <audio controls>
+      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/enc_dec_other.wav">
+      </audio>
+    </td>
+    <td style="text-align: center; vertical-align: middle;">
+      <audio controls>
+      <source src="">
       </audio>
     </td>
   </tr>
