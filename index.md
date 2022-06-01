@@ -18,15 +18,17 @@ DrumGAN VST is a simple and intuitive plugin for drum sound synthesis employing 
 
 In what follows, we showcase the aforementioned capabilities of DrumGAN VST by providing some audio and musical examples. We also show a demo of the latest prototype (to preserve anonymity, a demo of the final commercial software will be published upon acceptance of the paper).
 
+<div align="center" style="font-size:75%;">
 <video width="320" height="240" controls>
   <source src="https://anonymous757575.github.io/drumganvst-mlas/videos/drumGAN.mp4" type="video/mp4">
 </video>
+</div>
 
 <!-- <div align="center" style="font-size:75%;">
 <img src="images/DRUMGAN2.png" width=700px><br>
 Diagram of DrumGAN training procedure. Rather than using the true label as conditioning information for the Generator, we use the vector of class probabilities output by a pretrained classifier. This allows continuous control on the generated class after training, which enables creating hybrid sounds.
-</div> -->
-
+</div>
+ -->
 <br><br><br><br><br>
 
 
@@ -254,6 +256,31 @@ We compare encoded and reconstructed pairs of audio examples for DrumGAN VST and
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
       <source src="">
+      </audio>
+    </td>
+  </tr>
+
+</table>
+
+## Other Examples
+### Converting Beat-box to Drums
+<table>
+<caption><b>Converting Beat-box to Drums</b></caption>
+
+  <tr>
+    <td style="text-align: center; vertical-align: middle;"><b>Original</b></td>
+    <td style="text-align: center; vertical-align: middle;">
+      <audio controls>
+      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/beatboxGANitscalledmusicOrig.mp3">
+      </audio>
+    </td>
+  </tr>
+
+  <tr>
+    <td style="text-align: center; vertical-align: middle;"><b>Resynthesized</b></td>
+    <td style="text-align: center; vertical-align: middle;">
+      <audio controls>
+      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/beatboxGANitscalledmusic.mp3">
       </audio>
     </td>
   </tr>
