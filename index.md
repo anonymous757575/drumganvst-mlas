@@ -1,27 +1,11 @@
-.masthead h1 {
-  color: #F9F1F1;
-  font-family: 'Work Sans', sans-serif;
-  font-size: 108px;
-  margin: 0;
-}
-
-.masthead p {
-  color: #FFF;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 32px;
-}
-
-.section {
-  background-color: #000;
-  text-align: center;
-  padding-top: 5em;
-}
-<section class="section">
-  <div class="masthead">
-    <h1><span>Title</span></h1>
-    <p><span>Subtitle</span></p>
-  </div>
-</section>
+<header class="tc ph4">
+  <h1 class="f3 f2-m f1-l fw2 black-90 mv3">
+    This is the title
+  </h1>
+  <h2 class="f5 f4-m f3-l fw2 black-50 mt0 lh-copy">
+    This is the subtitle where additional information can go if you really need it.
+  </h2>
+</header>
 
 # DrumGAN VST: A Plugin for Drum Sound Analysis/Synthesis with Autoencoding Generative Adversarial Networks
 ## Supplementary material
