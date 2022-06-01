@@ -1,0 +1,455 @@
+<!DOCTYPE HTML>
+<!--
+    Prism by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+  -->
+<html>
+  <head>
+    <title>Supplementary Material Page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/extra.css" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+  </head>
+  <body>
+    <!-- Banner -->
+    <section id="banner">
+      <div class="inner">
+      <!-- <img src="images/mp32wav_thumbnail2.png" width="250" height="140"> -->
+  <section>
+    <h2>DrumGAN VST: DrumGAN VST: A Plugin for Drum Sound Analysis/Synthesis with Autoencoding GANs</h2>
+  </section>
+      </div>
+      <div id="logorow" class="inner split">
+<!--   <section class="align-center">
+    <a href="https://csl.sony.fr/"><img id='sonylogo' src="images/sonycsl-white.png"></a>
+  </section>
+  <section class="align-left">
+    <br/>
+      Sony Computer Science Laboratories Paris
+  </section>
+      </div>
+    </section> -->
+
+
+    <section id="intro" class="wrapper">
+    <a name="up"></a>
+      <div class="inner split">
+        <section>
+          <p>This repository contains supplementary material with regard to our paper<br/> <b>[DrumGAN VST](paper.pdf)</b>, submitted to the <i>Machine Learning for Audio Synthesis (MLAS) workshop at ICML </i>, 2022</p>
+          
+    <p>DrumGAN VST is a simple and intuitive plugin for drum sound synthesis employing Generative Adversarial Networks (GANs) and inspired by previous work [1]. DrumGAN VST offers the following key features:
+1. 44.1 kHz sample-rate audio operability
+2. Continuous instrument control over kick, snare, and cymbals: choose the amount of "kickness", "snareness", and "cymbalness" you want to confere to the synthesized sound. This control can also be used to create hymbrid sounds that morph characteristics from each instrument class, or to explore weird sounds by setting these parameters to unrealistic combinations (e.g., all to zero).
+3. Analysis/resynthesis AKA encoding/decoding: DrumGAN VST features an encoding neural network that can be used to analysize/encode some pre-existing sound and decode/resynthesize variations of it. 
+4. DrumGAN VST will be shortly available as an integrated feature in a commercial VST plugin.
+
+In what follows, we showcase the aforementioned capabilities of DrumGAN VST by providing some audio and musical examples. We also show a demo of the latest prototype (to preserve anonymity, a demo of the final commercial software will be published upon acceptance of the paper).
+</p>
+      <div align="center" style="font-size:75%;">
+      <video width="320" height="240" controls>
+        <source src="https://anonymous757575.github.io/drumganvst-mlas/videos/drumGAN.mp4" type="video/mp4">
+      </video>
+      </div>
+
+      <div class="align-center">
+      <a href="#baselines" class="button alt">Baselines</a>&nbsp;&nbsp;
+      <a href="#random-gen" class="button alt">Random z</a>&nbsp;&nbsp;
+      <a href="#switch-codes" class="button alt">Fixed z, different VQCPC</a>&nbsp;&nbsp;
+      <a href="#scales" class="button alt">Pitch Scales</a>&nbsp;&nbsp;
+      <a href="#interpolations" class="button alt">Latent Interpolations</a>&nbsp;&nbsp;
+      <a href="#from MIDI" class="button alt">MIDI</a>
+    </div>
+  </section>
+  <section>
+    <div class="row 12u$(xsmall)">
+      <p>Architecture training:</p>
+    </div>
+    <div class="row 12u$(xsmall)">
+      <img class="full-width" src="images/VQCPC_GAN.png"/>
+    </div>
+      <!-- <br/><br/> -->
+<!--       <ul class="align-center">
+                <a href="#full" class="button alt">Full Architecture</a>
+              </ul> -->
+  </section>
+      </div>
+    </section>
+    <section id="two" class="wrapper style2 alt">
+        <div class="inner">
+                <a name="baselines"></a>
+                <h3>Baselines</h3>
+                <table style="width:100%">
+                  <tr>
+                    <th style="width: 16%;">WGAN-1s</th>
+                    <th style="width: 16%;">WGAN-4s</th>
+                    <th style="width: 16%;">GANSynth</th>
+                    </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/baselines/wgan1s.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/baselines/wgan4s.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/baselines/gansynth.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                </table>
+                </div>
+                <div class="align-center">
+                          <ul class="actions">
+                <li><a href="#up" class="button alt">Up</a></li>
+              </ul>
+                            </div>
+                </section>
+    
+
+    <section id="two" class="wrapper style2 alt">
+        <div class="inner">
+                <a name="random-gen"></a>
+                <h3>Random generation</h3>
+                <table style="width:100%">
+                  <tr>
+                    <th style="width: 16%;">duration 0.5s</th>
+                    <th style="width: 16%;">duration 1s</th>
+                    <th style="width: 16%;">duration 2s</th>
+                    <th style="width: 16%;">duration 4s</th>
+                    </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/rand_gen/sample_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/rand_gen/sample_1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/rand_gen/sample_2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/rand_gen/sample_3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                </table>
+                </div>
+                <div class="align-center">
+                          <ul class="actions">
+                <li><a href="#up" class="button alt">Up</a></li>
+              </ul>
+                            </div>
+                </section>
+    
+    <section id="two" class="wrapper style2 alt">
+        <div class="inner">
+                <a name="switch-codes"></a>
+                <h3>Switching VQCPC sequence while fixing latent z and pitch</h3>
+                <table style="width:100%">
+                  <tr>
+                    <th style="width: 16%;">duration 0.5s</th>
+                    <th style="width: 16%;">duration 1s</th>
+                    <th style="width: 16%;">duration 2s</th>
+                    <th style="width: 16%;">duration 4s</th>
+                    </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/fixed_z_p_var_codes/sample_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/fixed_z_p_var_codes/sample_1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/fixed_z_p_var_codes/sample_2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/fixed_z_p_var_codes/sample_3.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                </table>
+                </div>
+                <div class="align-center">
+                          <ul class="actions">
+                <li><a href="#up" class="button alt">Up</a></li>
+              </ul>
+                            </div>
+                </section>
+
+                <section id="two" class="wrapper style2 alt">
+        <div class="inner">
+                <a name="scales"></a>
+                <h3>Pitch scales</h3>
+                <table style="width:100%">
+                  <tr>
+                    <th style="width: 16%;">duration 0.5s</th>
+                    <th style="width: 16%;">duration 1s</th>
+                    <th style="width: 16%;">duration 2s</th>
+                    <th style="width: 16%;">duration 4s</th>
+                    </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/scales/0/sample_0_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/scales/1/sample_0_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/scales/2/sample_0_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/scales/3/sample_0_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/scales/0/sample_1_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/scales/1/sample_1_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/scales/2/sample_1_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/scales/3/sample_1_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/scales/0/sample_2_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/scales/1/sample_2_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/scales/2/sample_2_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/scales/3/sample_2_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/scales/0/sample_3_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/scales/1/sample_3_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/scales/2/sample_3_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/scales/3/sample_3_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/scales/0/sample_4_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/scales/1/sample_4_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/scales/2/sample_4_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/scales/3/sample_4_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/scales/0/sample_5_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/scales/1/sample_5_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/scales/2/sample_5_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/scales/3/sample_5_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/scales/0/sample_6_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/scales/1/sample_6_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/scales/2/sample_6_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/scales/3/sample_6_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/scales/0/sample_7_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/scales/1/sample_7_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/scales/2/sample_7_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/scales/3/sample_7_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/scales/0/sample_8_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/scales/1/sample_8_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/scales/2/sample_8_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/scales/3/sample_8_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/scales/0/sample_9_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/scales/1/sample_9_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/scales/2/sample_9_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/scales/3/sample_9_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                </table>
+                </div>
+                <div class="align-center">
+                          <ul class="actions">
+                <li><a href="#up" class="button alt">Up</a></li>
+              </ul>
+                            </div>
+                </section>
+
+                <section id="two" class="wrapper style2 alt">
+        <div class="inner">
+                <a name="interpolations"></a>
+                <h3>Radial Interpolations</h3>
+                <table style="width:100%">
+                  <tr>
+                    <th style="width: 16%;">duration 0.5s</th>
+                    <th style="width: 16%;">duration 1s</th>
+                    <th style="width: 16%;">duration 2s</th>
+                    <th style="width: 16%;">duration 4s</th>
+                    </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/interpolation/radial/0/sample_0_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/radial/1/sample_0_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/radial/2/sample_0_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/radial/3/sample_0_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/interpolation/radial/0/sample_1_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/radial/1/sample_1_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/radial/2/sample_1_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/radial/3/sample_1_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/interpolation/radial/0/sample_2_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/radial/1/sample_2_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/radial/2/sample_2_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/radial/3/sample_2_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/interpolation/radial/0/sample_3_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/radial/1/sample_3_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/radial/2/sample_3_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/radial/3/sample_3_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/interpolation/radial/0/sample_4_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/radial/1/sample_4_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/radial/2/sample_4_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/radial/3/sample_4_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/interpolation/radial/0/sample_5_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/radial/1/sample_5_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/radial/2/sample_5_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/radial/3/sample_5_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/interpolation/radial/0/sample_6_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/radial/1/sample_6_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/radial/2/sample_6_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/radial/3/sample_6_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/interpolation/radial/0/sample_7_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/radial/1/sample_7_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/radial/2/sample_7_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/radial/3/sample_7_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/interpolation/radial/0/sample_8_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/radial/1/sample_8_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/radial/2/sample_8_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/radial/3/sample_8_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/interpolation/radial/0/sample_9_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/radial/1/sample_9_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/radial/2/sample_9_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/radial/3/sample_9_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                </table>
+          </div>
+        <div class="inner">
+                <a name="spherical intepolations"></a>
+                <h3>Spherical interpolations</h3>
+                <table style="width:100%">
+                  <tr>
+                    <th style="width: 16%;">duration 0.5s</th>
+                    <th style="width: 16%;">duration 1s</th>
+                    <th style="width: 16%;">duration 2s</th>
+                    <th style="width: 16%;">duration 4s</th>
+                    </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/interpolation/spherical/0/sample_0_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/spherical/1/sample_0_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/spherical/2/sample_0_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/spherical/3/sample_0_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/interpolation/spherical/0/sample_1_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/spherical/1/sample_1_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/spherical/2/sample_1_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/spherical/3/sample_1_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/interpolation/spherical/0/sample_2_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/spherical/1/sample_2_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/spherical/2/sample_2_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/spherical/3/sample_2_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/interpolation/spherical/0/sample_3_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/spherical/1/sample_3_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/spherical/2/sample_3_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/spherical/3/sample_3_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/interpolation/spherical/0/sample_4_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/spherical/1/sample_4_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/spherical/2/sample_4_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/spherical/3/sample_4_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/interpolation/spherical/0/sample_5_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/spherical/1/sample_5_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/spherical/2/sample_5_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/spherical/3/sample_5_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/interpolation/spherical/0/sample_6_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/spherical/1/sample_6_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/spherical/2/sample_6_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/spherical/3/sample_6_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/interpolation/spherical/0/sample_7_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/spherical/1/sample_7_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/spherical/2/sample_7_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/spherical/3/sample_7_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/interpolation/spherical/0/sample_8_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/spherical/1/sample_8_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/spherical/2/sample_8_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/spherical/3/sample_8_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td><audio controls><source src="assets/interpolation/spherical/0/sample_9_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/spherical/1/sample_9_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/spherical/2/sample_9_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/interpolation/spherical/3/sample_9_0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                </table>
+          </div>
+                    <div class="align-center">
+                          <ul class="actions">
+                <li><a href="#up" class="button alt">Up</a></li>
+              </ul>
+                            </div>
+                    </section>
+                    <section id="two" class="wrapper style2 alt">
+        <div class="inner">
+                <a name="from MIDI"></a>
+                <h3>Generations from MIDI</h3>
+                <p>
+                The examples below are generations from MIDI classical music pieces.
+                </p>
+                <table style="width:100%">
+                  <tr>
+                    <th style="width: 3%;">interpolation</th>
+                    <th style="width: 16%;">slow</th>
+                    <th style="width: 16%;">mid</th>
+                    <th style="width: 16%;">fast</th>
+
+                    </tr>
+                      <tr>
+                        <td>No</td>
+                        <td><audio controls><source src="assets/from_midi/0.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/from_midi/1.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/from_midi/2.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td>Yes</td>
+                        <td><audio controls><source src="assets/from_midi/0_interp.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/from_midi/1_interp.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="assets/from_midi/2_interp.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                </table>
+                </div>
+                <div class="align-center">
+                          <ul class="actions">
+                <li><a href="#up" class="button alt">Up</a></li>
+              </ul>
+                            </div>
+                </section>
+                    <section id="two" class="wrapper style2 alt">
+                    <a name="full"></a>
+                    <div class="row 12u$(xsmall)">
+<!--      <h3>Full Architecture</h3>
+    </div>
+    <div class="align-center">
+      <img class="nine-width" src="images/architecture_full.png"/>
+    </div>
+                          <div class="align-center">
+                          <ul class="actions">
+                <li><a href="#up" class="button alt">Up</a></li>
+              </ul>
+                            </div>
+                    </section> -->
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="copyright">
+  &copy; Javier Nistal, Cyran Aouameur, Stefan Lattner, Gaël Richard. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>.
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/extra.js"></script>
+
+  </body>
+</html>
