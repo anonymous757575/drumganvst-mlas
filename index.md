@@ -129,9 +129,6 @@ We show interpolations for DrumGAN VST. Inital and target timbres are chosen fro
       </audio>
     </td>
   </tr>
-  </tr>
-
-
 </table>
 
 
