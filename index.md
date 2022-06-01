@@ -1,8 +1,10 @@
-# Accompanying website for "DrumGAN VST: A Plugin for Drum Sound Analysis/Synthesis with Autoencoding Generative Adversarial Networks"
+# DrumGAN VST: A Plugin for Drum Sound Analysis/Synthesis with Autoencoding Generative Adversarial Networks
+## Supplementary material
 
-This repository describes the additional material and experiments around the paper "[DrumGAN VST](paper.pdf)" submitted at the 2022 MLAS workshop of ICML.
+This repository contains supplementary material with regard to our paper "[DrumGAN VST](paper.pdf)", submitted to the Machine Learning for Audio Synthesis (MLAS) workshop from ICML 2022.
 
-In this work, we present DrumGAN VST, a plugin for the synthesis of drum sounds based on a previous work employing Generative Adversarial Networks (GANs) [1]. Driven by feedback from professional artists and music production standards, we perform a series of improvements on the original model:
+### Overview
+In this work, we present DrumGAN VST, a simple and intuitive plugin for drum sound synthesis employing Generative Adversarial Networks (GANs) and inspired by previous work [1]. DrumGAN VST can synthesize:
 1) 44.1 kHz sample-rate audio operability
 2) Continuous instrument control
 3) Encoding-decoding of sounds to generate variations
