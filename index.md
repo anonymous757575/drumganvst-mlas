@@ -47,7 +47,6 @@ We compare DrumGAN VST generations with real samples and two other neural drum s
 <caption><b>random generations</b></caption>
   <tr>
     <td style="width: 16%; text-align: center; vertical-align: middle;"><b>Real Data</b></td>
-    <td style="width: 16%; text-align: center; vertical-align: middle;"><b>Real Data</b></td>
     <td style="width: 16%; text-align: center; vertical-align: middle;"><b>DrumGAN</b></td>
     <td style="width: 16%; text-align: center; vertical-align: middle;"><b>CRASH</b></td>
     <td style="width: 16%; text-align: center; vertical-align: middle;"><b>Style-DrumSynth</b></td>
