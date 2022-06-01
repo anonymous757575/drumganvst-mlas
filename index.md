@@ -51,12 +51,12 @@ Diagram of DrumGAN training procedure. Rather than using the true label as condi
     </td>
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://anonymous9123.github.io/iccc-ndm/sounds/rec/bongor.wav">
+      <source src="https://github.com/anonymous757575/drumganvst-mlas/blob/gh-pages/audios/random_enc_dec.mp3">
       </audio>
     </td>
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://anonymous9123.github.io/iccc-ndm/sounds/rec/bongor.wav">
+      <source src="https://github.com/anonymous757575/drumganvst-mlas/blob/gh-pages/audios/random_enc_dec.mp3">
       </audio>
     </td>
   </tr>
@@ -65,17 +65,17 @@ Diagram of DrumGAN training procedure. Rather than using the true label as condi
     <td style="text-align: center; vertical-align: middle;"><b>Kick = 0.2 </b></td>
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://anonymous9123.github.io/iccc-ndm/sounds/rec/bongor.wav">
+      <source src="https://github.com/anonymous757575/drumganvst-mlas/blob/gh-pages/audios/random_enc_dec.mp3">
       </audio>
     </td>
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://anonymous9123.github.io/iccc-ndm/sounds/rec/bongor.wav">
+      <source src="https://github.com/anonymous757575/drumganvst-mlas/blob/gh-pages/audios/random_enc_dec.mp3">
       </audio>
     </td>
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://anonymous9123.github.io/iccc-ndm/sounds/rec/bongor.wav">
+      <source src="https://github.com/anonymous757575/drumganvst-mlas/blob/gh-pages/audios/random_enc_dec.mp3">
       </audio>
     </td>
   </tr>
@@ -83,17 +83,17 @@ Diagram of DrumGAN training procedure. Rather than using the true label as condi
     <td style="text-align: center; vertical-align: middle;"><b>Kick = 0.2 </b></td>
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://anonymous9123.github.io/iccc-ndm/sounds/rec/bongor.wav">
+      <source src="https://github.com/anonymous757575/drumganvst-mlas/blob/gh-pages/audios/random_enc_dec.mp3">
       </audio>
     </td>
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://anonymous9123.github.io/iccc-ndm/sounds/rec/bongor.wav">
+      <source src="https://github.com/anonymous757575/drumganvst-mlas/blob/gh-pages/audios/random_enc_dec.mp3">
       </audio>
     </td>
         <td style="text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://anonymous9123.github.io/iccc-ndm/sounds/rec/bongor.wav">
+      <source src="https://github.com/anonymous757575/drumganvst-mlas/blob/gh-pages/audios/random_enc_dec.mp3">
       </audio>
     </td>
   </tr>
@@ -114,12 +114,12 @@ Once the generator network is trained, it is fixed and we use it to generate a d
     <td style="text-align: center; vertical-align: middle;"><b>Kick = 0.2 </b></td>
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://anonymous9123.github.io/iccc-ndm/sounds/rec/bongo.wav">
+      <source src="https://github.com/anonymous757575/drumganvst-mlas/blob/gh-pages/audios/random_enc_dec.mp3">
       </audio>
     </td>
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://anonymous9123.github.io/iccc-ndm/sounds/rec/bongor.wav">
+      <source src="https://github.com/anonymous757575/drumganvst-mlas/blob/gh-pages/audios/random_enc_dec.mp3">
       </audio>
     </td>
   </tr>
@@ -128,12 +128,12 @@ Once the generator network is trained, it is fixed and we use it to generate a d
     <td style="text-align: center; vertical-align: middle;"><b>Kick = 0.2 </b></td>
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://anonymous9123.github.io/iccc-ndm/sounds/rec/bongor.wav">
+      <source src="https://github.com/anonymous757575/drumganvst-mlas/blob/gh-pages/audios/random_enc_dec.mp3">
       </audio>
     </td>
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://anonymous9123.github.io/iccc-ndm/sounds/rec/bongor.wav">
+      <source src="https://github.com/anonymous757575/drumganvst-mlas/blob/gh-pages/audios/random_enc_dec.mp3">
       </audio>
     </td>
   </tr>
