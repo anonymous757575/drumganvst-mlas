@@ -18,12 +18,7 @@ DrumGAN VST is a simple and intuitive plugin for drum sound synthesis employing 
 
 In what follows, we showcase the aforementioned capabilities of DrumGAN VST by providing some audio and musical examples. We also show a demo of the latest prototype (to preserve anonymity, a demo of the final commercial software will be published upon acceptance of the paper).
 
-  <video width="500px" height="500px" 
-      controls="controls"/> 
-
-      <source src="https://cslmusicteam.sony.fr/wp-content/uploads/2021/11/drumGAN.mp4" 
-          type="video/mp4"> 
-  </video> 
+https://cslmusicteam.sony.fr/wp-content/uploads/2021/11/drumGAN.mp4
 
 <!-- <div align="center" style="font-size:75%;">
 <img src="images/DRUMGAN2.png" width=700px><br>
