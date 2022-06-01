@@ -46,33 +46,33 @@ We compare DrumGAN VST generations with real samples and two other neural drum s
 <table>
 <caption><b>random generations</b></caption>
   <tr>
-    <td></td>
-    <td style="text-align: center; vertical-align: middle;"><b>Real Data</b></td>
-    <td style="text-align: center; vertical-align: middle;"><b>DrumGAN</b></td>
-    <td style="text-align: center; vertical-align: middle;"><b>CRASH</b></td>
-    <td style="text-align: center; vertical-align: middle;"><b>Style-DrymSynth</b></td>
+    <td style="width: 16%; "text-align: center; vertical-align: middle;"><b>Real Data</b></td>
+    <td style="width: 16%; text-align: center; vertical-align: middle;"><b>Real Data</b></td>
+    <td style="width: 16%; text-align: center; vertical-align: middle;"><b>DrumGAN</b></td>
+    <td style="width: 16%; text-align: center; vertical-align: middle;"><b>CRASH</b></td>
+    <td style="width: 16%; text-align: center; vertical-align: middle;"><b>Style-DrymSynth</b></td>
   </tr>
 
   <tr>
 <!--     <td style="text-align: center; vertical-align: middle;"><b>Kicks </b></td> -->
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_gen_true.wav">
+      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_gen true.wav">
       </audio>
     </td>
-    <td style="text-align: center; vertical-align: middle;">
+    <td style="width: 16%; text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_gen_drumgan.wav">
+      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_gen drumgan.wav">
       </audio>
     </td>
-    <td style="text-align: center; vertical-align: middle;">
+    <td style="width: 16%; text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_gen_CRASH.wav">
+      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_gen CRASH.wav">
       </audio>
     </td>
-    <td style="text-align: center; vertical-align: middle;">
+    <td style="width: 16%; text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_gen_dsd.wav">
+      <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_gen dsd.wav">
       </audio>
     </td>
   </tr>
