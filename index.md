@@ -9,10 +9,6 @@ In this work, we present DrumGAN VST, a plugin for the synthesis of drum sounds 
 4) Development of a VST prototype
 5) Integration into commercial software plugin from a top audio-tech company.
 
-<audio controls>
-  <source src="https://www.computerhope.com/jargon/m/example.mp3" />
-</audio>
-
 
 <br>
 This website contains supplementary material to the following sections
@@ -67,7 +63,7 @@ Diagram of DrumGAN training procedure. Rather than using the true label as condi
     <td style="text-align: center; vertical-align: middle;"><b>Kick = 0.2 </b></td>
     <td style="text-align: center; vertical-align: middle;">
       <audio controls>
-      <source src="https://github.com/anonymous757575/drumganvst-mlas/blob/gh-pages/audios/random_enc_dec.mp3">
+      <source src="https://www.computerhope.com/jargon/m/example.mp3">
       </audio>
     </td>
     <td style="text-align: center; vertical-align: middle;">
