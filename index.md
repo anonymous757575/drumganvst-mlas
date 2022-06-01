@@ -43,7 +43,7 @@ This website contains supplementary material to the following sections
 ## Baseline Comparisons
 We compare DrumGAN VST generations with real samples and two other neural drum synthesizers as baselines: one is CRASH, based on diffusion models, and the other is Style-DrumSynth, based on StyleGAN. While the baselines are state-of-the-art, they have high bias and fail to capture the diversity and quality of timbres compared to real data, while DrumGAN produces high quality samples similar to the real data. Samples were randomly selected to fairly reflect the diversity and quality of samples from each model. Quantitative comparisons can be found in the paper.
 
-<table>
+<table style="width:50%">
 <caption><b>random generations</b></caption>
   <tr>
     <td style="width: 16%; text-align: center; vertical-align: middle;"><b>Real Data</b></td>
