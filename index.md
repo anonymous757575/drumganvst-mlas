@@ -92,9 +92,6 @@ A flavour of its drum sound quality and diversity compared to other neural drum 
       </audio>
     </td>
   </tr>
-  </tr>
-
-
 </table>
 
 
