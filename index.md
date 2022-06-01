@@ -2,11 +2,11 @@
   <center><h1>DrumGAN VST: A Plugin for Drum Sound Analysis/Synthesis with Autoencoding Generative Adversarial Networks</h1></center>
 </div>
 
-<br/>
 <div align="center">
 <b>Supplementary material</b>
 </div>
 
+<br/>
 This repository contains supplementary material with regard to our paper "[DrumGAN VST](paper.pdf)", submitted to the Machine Learning for Audio Synthesis (MLAS) workshop at ICML 2022.
 
 ## Overview
