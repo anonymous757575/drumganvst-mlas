@@ -41,7 +41,7 @@ This website contains supplementary material to the following sections
  -->
 
 ## Baseline Comparisons
-We compare DrumGAN VST generations with real samples and two other neural drum synthesizers as baselines: one is CRASH, based on diffusion models, and the other is Style-DrumSynth, based on StyleGAN. While the baselines are state-of-the-art, they have high bias and fail to capture the diversity of timbres in the dataset, while DrumGAN produces high quality samples similar to the real data. Samples were randomly selected to fairly reflect the diversity and quality of samples from each model. Quantitative comparisons can be found in the paper.
+We compare DrumGAN VST generations with real samples and two other neural drum synthesizers as baselines: one is CRASH, based on diffusion models, and the other is Style-DrumSynth, based on StyleGAN. While the baselines are state-of-the-art, they have high bias and fail to capture the diversity and quality of timbres compared to real data, while DrumGAN produces high quality samples similar to the real data. Samples were randomly selected to fairly reflect the diversity and quality of samples from each model. Quantitative comparisons can be found in the paper.
 
 <table>
 <caption><b>random generations</b></caption>
@@ -50,12 +50,12 @@ We compare DrumGAN VST generations with real samples and two other neural drum s
     <td style="width: 16%; text-align: center; vertical-align: middle;"><b>Real Data</b></td>
     <td style="width: 16%; text-align: center; vertical-align: middle;"><b>DrumGAN</b></td>
     <td style="width: 16%; text-align: center; vertical-align: middle;"><b>CRASH</b></td>
-    <td style="width: 16%; text-align: center; vertical-align: middle;"><b>Style-DrymSynth</b></td>
+    <td style="width: 16%; text-align: center; vertical-align: middle;"><b>Style-DrumSynth</b></td>
   </tr>
 
   <tr>
 <!--     <td style="text-align: center; vertical-align: middle;"><b>Kicks </b></td> -->
-    <td style="text-align: center; vertical-align: middle;">
+    <td style="width: 16%; text-align: center; vertical-align: middle;">
       <audio controls>
       <source src="https://anonymous757575.github.io/drumganvst-mlas/audios/random_gen true.wav">
       </audio>
