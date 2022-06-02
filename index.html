@@ -77,7 +77,7 @@
         <div class="inner">
                 <a name="baselines"></a>
                 <h3>Baseline Comparison</h3>
-                <p>We compare DrumGAN VST generations with real samples and two other neural drum synthesizers as baselines: one is CRASH, based on diffusion models, and the other is Style-DrumSynth, based on StyleGAN. While the baselines are state-of-the-art, they have high bias and fail to capture the diversity and quality of timbres compared to real data, while DrumGAN produces high quality samples similar to the real data. Samples were randomly selected to fairly reflect the diversity and quality of samples from each model. Quantitative comparisons can be found in the paper.</p>
+                <p>We compare DrumGAN VST generations with real samples and two other neural drum synthesizers as baselines: one is CRASH, based on diffusion models, and the other is Style-DrumSynth, based on StyleGAN. Overall, the baselines have high bias and fail to generate diverse examples in terms of timbre and exhibit annoying artifacts compared to real data, while DrumGAN produces high quality samples similar to the real data. Samples were randomly selected to fairly reflect the diversity and quality of samples from each model. Quantitative comparisons can be found in the paper.</p>
                 <table style="width:100%">
                   <tr>
                     <th style="text-align: center; width: 16%;">Real Data</th>
@@ -164,7 +164,7 @@
         <div class="inner">
                 <a name="switch-codes"></a>
                 <h3>Analysis/Synthesis of prexisting sounds</h3>
-                We compare encoded and reconstructed pairs of audio examples for DrumGAN VST and Style-DrumSynth, which also incorporates an encoder analogous to ours. Encoded sounds are chosen from both the models' pre-generated samples, as well as from different real drum datasets. We can hear that DrumGAN VST's synthesized examples are generally perceived closer in terms of timbre to the original encoded sample.
+                We compare encoded and reconstructed pairs of audio examples for DrumGAN VST and Style-DrumSynth, which also incorporates an encoder analogous to ours. Encoded sounds are chosen from the training distribution, as well as from unseen pèrcussion sounds. We can hear that DrumGAN VST's synthesized examples are generally perceived closer in terms of timbre to the original encoded sample, specially in the case of unseen data, for which Style-DrumSynth seems to generate the same example. We argue that the baseline's encoder could be overfitting the training data and fails to generalise to unseen examples.
                 <h4>Seen during training</h4>
                 <div align="center" class="inner">
                 <table style="width:70%">
@@ -233,19 +233,31 @@
                       </tr>
                 </table>
                 </div>
+                <h4>AI-generated DrumKit</h4>
+                <div align="center" class="inner">
+                    To be published upon acceptance
                 </div>
+                <h4>Music</h4>
+                <div align="center" class="inner">
+                <table style="width:70%">
+                  <tr>
+                    <th style="width: 50%; text-align: center;">Original</th>
+                    <th style="width: 50%; text-align: center;">Original + Decoded</th>
+                    </tr>
+                      <tr>
+                        <td><audio controls><source src="audios/beatboxGANitscalledmusicOrig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="audios/beatboxGANitscalledmusic.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                </table>
+                </div>
+                <h4>Azzaro worldwide advertisement</h4>
+                <div align="center" class="inner">
+                    <video width="420" height="240" controls>
+                      <source src="https://www.youtube.com/watch?v=02_sciFL_XY" type="video/mp4">
+                    </video>
+                </div>
+        </div>
 
-<!--      <h3>Full Architecture</h3>
-    </div>
-    <div class="align-center">
-      <img class="nine-width" src="images/architecture_full.png"/>
-    </div>
-                          <div class="align-center">
-                          <ul class="actions">
-                <li><a href="#up" class="button alt">Up</a></li>
-              </ul>
-                            </div>
-                    </section> -->
 
     <!-- Footer -->
     [1] Nistal, J., Lattner, S., and Richard, G. DrumGAN: Synthesis of Drum Sounds With Timbral Feature Conditioning Using Generative Adversarial Networks. In Proc. of the 21st International Society for Music Information Retrieval, ISMIR, Montréal, Canada, 2020.
