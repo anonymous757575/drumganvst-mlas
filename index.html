@@ -165,6 +165,20 @@
                 <a name="switch-codes"></a>
                 <h3>Analysis/Synthesis of prexisting sounds</h3>
                 We compare encoded and reconstructed pairs of audio examples for DrumGAN VST and Style-DrumSynth, which also incorporates an encoder analogous to ours. Encoded sounds are chosen from both the models' pre-generated samples, as well as from different real drum datasets. We can hear that DrumGAN VST's synthesized examples are generally perceived closer in terms of timbre to the original encoded sample.
+                <h4>Seen during training</h4>
+                <div align="center" class="inner">
+                <table style="width:70%">
+                  <tr>
+                    <th style="width: 20%; text-align: center;">DrumGAN</th>
+                    <th style="width: 20%; text-align: center;">Style-DrumSynth</th>
+                    </tr>
+                      <tr>
+                        <td><audio controls><source src="audios/soma_enc_dec.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="audios/enc_dec_dsd_train.wav" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                </table>
+                </div>
+                <h4>Unseen during training</h4>
                 <div align="center" class="inner">
                 <table style="width:70%">
                   <tr>
@@ -175,22 +189,22 @@
                       <tr>
                         <td style="width: 10%; text-align: center; vertical-align: middle;"><b>Unseen Kicks</b></td>
                         <td><audio controls><source src="audios/enc_dec_kicks.wav" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
-                        <td><audio controls><source src="" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="audios/enc_dec_dsd kick.wav" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
                       </tr>
                       <tr>
                         <td style="width: 10%; text-align: center; vertical-align: middle;"><b>Unseen Snares</b></td>
                         <td><audio controls><source src="audios/enc_dec_snares.wav" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
-                        <td><audio controls><source src="" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="audios/enc_dec_dsd snare.wav" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
                       </tr>
                       <tr>
                         <td style="width: 10%; text-align: center; vertical-align: middle;"><b>Unseen Cymbals</b></td>
                         <td><audio controls><source src="audios/enc_dec_cymbals.wav" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
-                        <td><audio controls><source src="" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="audios/enc_dec_dsd cymbal.wav" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
                       </tr>
                       <tr>
                         <td style="width: 10%; text-align: center; vertical-align: middle;"><b>Unseen Other</b></td>
                         <td><audio controls><source src="audios/enc_dec_other.wav" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
-                        <td><audio controls><source src="" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="audios/enc_dec_dsd other.wav" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
                       </tr>
                 </table>
                 </div>
