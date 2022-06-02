@@ -1,0 +1,230 @@
+<!DOCTYPE HTML>
+<!--
+    Prism by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+  -->
+<html>
+  <head>
+    <title>Supplementary Material Page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/extra.css" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+  </head>
+  <body>
+    <!-- Banner -->
+    <section id="banner">
+      <div class="inner">
+      <!-- <img src="images/mp32wav_thumbnail2.png" width="250" height="140"> -->
+  <section>
+    <h2>DrumGAN VST: A Plugin for Drum Sound Analysis/Synthesis with Autoencoding GANs</h2>
+  </section>
+      </div>
+      <div id="logorow" class="inner split">
+<!--   <section class="align-center">
+    <a href="https://csl.sony.fr/"><img id='sonylogo' src="images/sonycsl-white.png"></a>
+  </section> -->
+<!--   <section class="align-left">
+    <br/>
+      Sony Computer Science Laboratories Paris
+  </section> -->
+      </div>
+    </section>
+
+
+    <section id="intro" class="wrapper">
+    <a name="up"></a>
+      <div class="inner split">
+      <!-- <div> -->
+        <section>
+
+          <p>This page contains supplementary material for the paper <b>DrumGAN VST: A Plugin for Drum Sound Analysis/Synthesis with Autoencoding GANs</b>, submitted to the <i>Machine Learning for Audio Synthesis (MLAS)</i> workshop at ICML 2022. DrumGAN VST is a simple and intuitive plugin for drum sound synthesis employing Generative Adversarial Networks (GANs) and inspired by previous work [1].</p>
+        </section>
+        <section>
+          <div class="align-center">
+            <video width="420" height="240" controls>
+              <source src="https://anonymous757575.github.io/drumganvst-mlas/videos/drumGAN.mp4" type="video/mp4">
+            </video>
+          </div>
+        </section>
+      </div>
+      <div>
+        <section>
+          DrumGAN VST offers the following key features:
+    <ol type="1">
+        <li>44.1 kHz sample-rate audio operability</li>
+        <li>Continuous instrument control over kick, snare, and cymbals: choose the amount of "kickness", "snareness", and "cymbalness" you want to confere to the synthesized sound. This control can also be used to create hymbrid sounds that morph characteristics from each instrument class, or to explore weird sounds by setting these parameters to unrealistic combinations (e.g., all to zero).</li>
+        <li>Analysis/resynthesis AKA encoding/decoding: DrumGAN VST features an encoding neural network that can be used to analysize/encode some pre-existing sound and decode/resynthesize variations of it. </li>
+        <li>DrumGAN VST will be shortly available as an integrated feature in a commercial VST plugin.</li>
+      </ol>  
+      In what follows, we showcase the aforementioned capabilities of DrumGAN VST by providing some audio and musical examples. We also show a demo of the latest prototype (to preserve anonymity, a demo of the final commercial software will be published upon acceptance of the paper).
+      <div class="align-left">
+        <ul type="0">
+          <li><a href="#baselines" class="button alt">Baseline Comparison</a>&nbsp;&nbsp;</li>
+          <li><a href="#random-gen" class="button alt">Instrument Control & Interpolations</a>&nbsp;&nbsp;</li>
+          <li><a href="#switch-codes" class="button alt">Analysis/Synthesis of prexisting sounds</a>&nbsp;&nbsp;</li>
+          <li><a href="#scales" class="button alt">Other Examples</a>&nbsp;&nbsp;</li>
+      </ul> 
+    </div>
+  </section>
+
+      </div>
+    </section>
+    <section id="two" class="wrapper style2 alt">
+        <div class="inner">
+                <a name="baselines"></a>
+                <h3>Baseline Comparison</h3>
+                <p>We compare DrumGAN VST generations with real samples and two other neural drum synthesizers as baselines: one is CRASH, based on diffusion models, and the other is Style-DrumSynth, based on StyleGAN. While the baselines are state-of-the-art, they have high bias and fail to capture the diversity and quality of timbres compared to real data, while DrumGAN produces high quality samples similar to the real data. Samples were randomly selected to fairly reflect the diversity and quality of samples from each model. Quantitative comparisons can be found in the paper.</p>
+                <table style="width:100%">
+                  <tr>
+                    <th style="text-align: center; width: 16%;">Real Data</th>
+                    <th style="text-align: center; width: 16%;">DrumGAN</th>
+                    <th style="text-align: center; width: 16%;">CRASH</th>
+                    <th style="text-align: center; width: 16%;">Style-DrumSynth</th>
+                    </tr>
+                      <tr>
+                        <td><audio controls><source src="audios/random_gen true.wav" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="audios/random_gen drumgan.wav" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="audios/random_gen CRASH.wav" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="audios/random_gen dsd.wav" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                </table>
+                </div>
+                <div class="align-center">
+                          <ul class="actions">
+                <li><a href="#up" class="button alt">Up</a></li>
+              </ul>
+                            </div>
+                </section>
+    
+
+    <section id="two" class="wrapper style2 alt">
+        <div class="inner">
+                <a name="random-gen"></a>
+                <h3>Instrument Control & Interpolations</h3>
+                <p>We show interpolations for DrumGAN VST. Inital and target timbres are chosen from generated samples. DrumGAN VST is explicitly conditioned on a global class probability latent vector, therefore, interpolations sound like reasonable instruments across all classes.</p>
+                <div align="center" class="inner">
+                <table style="text-align: center; width:50%">
+<!--                   <tr>
+                    <th style="width: 16%;">duration 0.5s</th>
+                    <th style="width: 16%;">duration 1s</th>
+                    <th style="width: 16%;">duration 2s</th>
+                    <th style="width: 16%;">duration 4s</th>
+                  </tr> -->
+                  <tr>
+                    <td style="width: 25%; text-align: center; vertical-align: middle;"><b>Cymbals to Kicks </b></td>
+                    <td><audio controls><source src="audios/int_01.wav" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                  </tr>
+                  <tr>
+                    <td style="width: 25%; text-align: center; vertical-align: middle;"><b>Kicks to Snares </b></td>
+                    <td><audio controls><source src="audios/int_12.wav" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                  </tr>
+                  <tr>
+                    <td style="width: 25%; text-align: center; vertical-align: middle;"><b>Cymbals to Snares </b></td>
+                    <td><audio controls><source src="audios/int_02.wav" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                  </tr>
+                  
+                </table>
+                </div>
+                </div>
+                <div class="align-center">
+                          <ul class="actions">
+                <li><a href="#up" class="button alt">Up</a></li>
+              </ul>
+                            </div>
+                </section>
+    
+    <section id="two" class="wrapper style2 alt">
+        <div class="inner">
+                <a name="switch-codes"></a>
+                <h3>Analysis/Synthesis of prexisting sounds</h3>
+                We compare encoded and reconstructed pairs of audio examples for DrumGAN VST and Style-DrumSynth, which also incorporates an encoder analogous to ours. Encoded sounds are chosen from both the models' pre-generated samples, as well as from different real drum datasets. We can hear that DrumGAN VST's synthesized examples are generally perceived closer in terms of timbre to the original encoded sample.
+                <div align="center" class="inner">
+                <table style="width:70%">
+                  <tr>
+                    <td style="width: 25%; text-align: center; vertical-align: middle;"><b></b></td>
+                    <th style="width: 20%; text-align: center;">DrumGAN</th>
+                    <th style="width: 20%; text-align: center;">Style-DrumSynth</th>
+                    </tr>
+                      <tr>
+                        <td style="width: 10%; text-align: center; vertical-align: middle;"><b>Unseen Kicks</b></td>
+                        <td><audio controls><source src="audios/enc_dec_kicks.wav" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td style="width: 10%; text-align: center; vertical-align: middle;"><b>Unseen Snares</b></td>
+                        <td><audio controls><source src="audios/enc_dec_snares.wav" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td style="width: 10%; text-align: center; vertical-align: middle;"><b>Unseen Cymbals</b></td>
+                        <td><audio controls><source src="audios/enc_dec_cymbals.wav" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      <tr>
+                        <td style="width: 10%; text-align: center; vertical-align: middle;"><b>Unseen Other</b></td>
+                        <td><audio controls><source src="audios/enc_dec_other.wav" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                </table>
+                </div>
+                </div>
+                <div class="align-center">
+                          <ul class="actions">
+                <li><a href="#up" class="button alt">Up</a></li>
+              </ul>
+                            </div>
+                </section>
+
+                <section id="two" class="wrapper style2 alt">
+        <div class="inner">
+                <a name="scales"></a>
+                <h3>Other examples</h3>
+                <h4>Converting beat-box to drums</h4>
+                <div align="center" class="inner">
+                <table style="width:70%">
+                  <tr>
+                    <th style="width: 50%; text-align: center;">Original</th>
+                    <th style="width: 50%; text-align: center;">Original + Decoded</th>
+                    </tr>
+                      <tr>
+                        <td><audio controls><source src="audios/beatboxGANitscalledmusicOrig.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                        <td><audio controls><source src="audios/beatboxGANitscalledmusic.mp3" type="audio/mpeg"/> Your browser does not support the audio element.</audio></td>
+                      </tr>
+                </table>
+                </div>
+                </div>
+
+<!--      <h3>Full Architecture</h3>
+    </div>
+    <div class="align-center">
+      <img class="nine-width" src="images/architecture_full.png"/>
+    </div>
+                          <div class="align-center">
+                          <ul class="actions">
+                <li><a href="#up" class="button alt">Up</a></li>
+              </ul>
+                            </div>
+                    </section> -->
+
+    <!-- Footer -->
+    [1] Nistal, J., Lattner, S., and Richard, G. DrumGAN: Synthesis of Drum Sounds With Timbral Feature Conditioning Using Generative Adversarial Networks. In Proc. of the 21st International Society for Music Information Retrieval, ISMIR, Montréal, Canada, 2020.
+    <footer id="footer">
+      <div class="copyright">
+  &copy; Anonymous. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>.
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/extra.js"></script>
+
+  </body>
+</html>
